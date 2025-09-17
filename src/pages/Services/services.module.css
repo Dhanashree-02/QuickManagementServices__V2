@@ -1,0 +1,151 @@
+.servicesHero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/services-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.servicesTitle {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.servicesSubtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.servicesIntro {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.servicesIntro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.servicesIntro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.processSection {
+  background-color: var(--secondary-color);
+}
+
+.processSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.processSteps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 2px;
+  background-color: var(--primary-color);
+}
+
+.processStep {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.processStep h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.ctaSection {
+  background-image: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.9)), url('/images/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: #fff;
+  color: var(--primary-color);
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: var(--accent-color);
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .servicesHero {
+    height: 30vh;
+  }
+  
+  .servicesTitle {
+    font-size: 2.5rem;
+  }
+  
+  .servicesSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,166 @@
+/* ===== Header Container ===== */
+.header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Flex wrapper */
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* ===== Logo ===== */
+.logo h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  transition: width 0.4s ease;
+}
+
+.logo h1:hover {
+  transform: scale(1.08);
+  color: #000;
+}
+
+.logo h1:hover::after {
+  width: 100%;
+}
+
+/* ===== Navbar Links ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Underline hover animation */
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* ===== Mobile Menu Icon ===== */
+.menuIcon {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: transform 0.3s ease;
+}
+
+.menuIcon span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
+
+/* Menu icon animation (hamburger → X) */
+.menuIcon.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menuIcon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuIcon.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: flex;
+  }
+
+  .navList {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.95);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .navList.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navItem {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .navLink {
+    font-size: 1.5rem;
+    color: #000;
+  }
+}

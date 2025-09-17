@@ -1,0 +1,145 @@
+.aboutHero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/about-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.aboutTitle {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.aboutSubtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.aboutContent {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutText {
+  flex: 1;
+}
+
+.aboutText h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.aboutText p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.aboutImage {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.valuesSection {
+  background-color: var(--secondary-color);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.valueCard {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.valueCard:hover {
+  transform: translateY(-10px);
+}
+
+.valueIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.valueCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.memberImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.memberImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamMember h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.teamMember p {
+  color: #666;
+}
+
+@media (max-width: 992px) {
+  .aboutContent {
+    flex-direction: column;
+  }
+  
+  .aboutImage {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutHero {
+    height: 30vh;
+  }
+  
+  .aboutTitle {
+    font-size: 2.5rem;
+  }
+  
+  .aboutSubtitle {
+    font-size: 1.2rem;
+  }
+}
