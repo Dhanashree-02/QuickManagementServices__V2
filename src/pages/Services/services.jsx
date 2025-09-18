@@ -4,7 +4,7 @@ import styles from './Services.module.css';
 const Services = () => {
   const services = [
     {
-      id: 1,
+      id: 1,  
       title: 'Business Consulting',
       description: 'Strategic business consulting to help your company grow and succeed in today\'s competitive market.',
       image: '/images/service1.jpg'
