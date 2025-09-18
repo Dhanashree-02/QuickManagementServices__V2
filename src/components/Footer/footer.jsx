@@ -7,10 +7,13 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.footerContent}>
+          {/* Logo + Tagline */}
           <div className={styles.footerLogo}>
             <h2>QMS</h2>
             <p>Quick Management Services</p>
           </div>
+
+          {/* Links */}
           <div className={styles.footerLinks}>
             <div className={styles.linkColumn}>
               <h3>Quick Links</h3>
@@ -39,6 +42,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        {/* Bottom Section */}
         <div className={styles.footerBottom}>
           <p>&copy; {currentYear} Quick Management Services. All rights reserved.</p>
         </div>

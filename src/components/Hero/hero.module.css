@@ -1,14 +1,7 @@
-/* Remove default margins that cause gaps */
+/* Hero Section */
 .hero {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.heroTitle {
-  margin: 0 0 1.2rem 0; /* only bottom margin */
-}
-
-.hero {
+  margin: 0 !important;
+  padding: 0 !important;
   position: relative;
   height: 100vh;
   display: flex;
@@ -16,9 +9,11 @@
   justify-content: center;
   color: #fff;
   overflow: hidden;
-  background: linear-gradient(135deg, #6a11cb, #2575fc, #ff512f, #dd2476);
+
+  /* Sleek gradient background */
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #0f2027, #203a43, #2c5364);
   background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
+  animation: gradientShift 18s ease infinite;
 }
 
 /* Animated gradient background */
@@ -45,30 +40,42 @@
 }
 
 .heroTitle {
-  font-size: 3.5rem;
-  margin-bottom: 1.2rem;
+  font-size: 3.8rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -1px;
 }
 
 .heroTitle span {
-  background: linear-gradient(90deg, #ff9800, #ffc107);
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .heroSubtitle {
-  font-size: 1.4rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.95;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
   font-weight: 300;
-  letter-spacing: 0.5px;
+  color: #e0e0e0;
 }
 
 .heroCta {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   justify-content: center;
+}
+/* Default Explore Services button */
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* On hover, change text color */
+.btn:hover {
+  color: #000 !important; /* black text */
+  /* or use white text if you prefer */
+  /* color: #fff !important; */
 }
 
 /* Fade in animation */
@@ -95,12 +102,12 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 80vh;
+    height: 85vh;
     text-align: center;
     padding: 0 1rem;
   }
   .heroTitle {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
   .heroSubtitle {
     font-size: 1rem;

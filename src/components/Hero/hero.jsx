@@ -10,11 +10,11 @@ const Hero = () => {
             Professional <span>Management</span> Services
           </h1>
           <p className={styles.heroSubtitle}>
-            We help businesses grow and succeed through expert management solutions
+            Empowering businesses with innovative strategies and expert solutions to achieve sustainable growth.
           </p>
           <div className={styles.heroCta}>
-            <Button to="/services" variant="primary">Our Services</Button>
-            <Button to="/contact" variant="secondary">Contact Us</Button>
+            <Button to="/services" variant="primary" className={styles.btn}>Explore Services</Button>
+            <Button to="/contact" variant="secondary">Get in Touch</Button>
           </div>
         </div>
       </div>
