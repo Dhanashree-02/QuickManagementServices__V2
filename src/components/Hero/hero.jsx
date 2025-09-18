@@ -6,8 +6,12 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className="container">
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Professional Management Services</h1>
-          <p className={styles.heroSubtitle}>We help businesses grow and succeed through expert management solutions</p>
+          <h1 className={styles.heroTitle}>
+            Professional <span>Management</span> Services
+          </h1>
+          <p className={styles.heroSubtitle}>
+            We help businesses grow and succeed through expert management solutions
+          </p>
           <div className={styles.heroCta}>
             <Button to="/services" variant="primary">Our Services</Button>
             <Button to="/contact" variant="secondary">Contact Us</Button>

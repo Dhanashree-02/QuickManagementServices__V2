@@ -1,29 +1,68 @@
+/* Remove default margins that cause gaps */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.heroTitle {
+  margin: 0 0 1.2rem 0; /* only bottom margin */
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #fff;
+  overflow: hidden;
+  background: linear-gradient(135deg, #6a11cb, #2575fc, #ff512f, #dd2476);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .heroContent {
-  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
   margin: 0 auto;
   text-align: center;
+  animation: fadeInUp 1.2s ease forwards;
+  padding: 0 1rem;
 }
 
 .heroTitle {
   font-size: 3.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   font-weight: 700;
+  line-height: 1.2;
+}
+
+.heroTitle span {
+  background: linear-gradient(90deg, #ff9800, #ffc107);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heroSubtitle {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 2.5rem;
-  opacity: 0.9;
+  opacity: 0.95;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .heroCta {
@@ -32,19 +71,41 @@
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    height: 70vh;
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
-  
   .heroSubtitle {
     font-size: 1.2rem;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .heroTitle {
+    font-size: 2.3rem;
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
   .heroCta {
     flex-direction: column;
     align-items: center;
