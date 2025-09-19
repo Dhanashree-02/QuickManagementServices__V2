@@ -1,57 +1,69 @@
 .servicesHero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/services-hero.jpg');
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #0f2027, #203a43, #2c5364);
   background-size: cover;
   background-position: center;
-  height: 40vh;
+  height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .servicesTitle {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  animation: slideUp 1s ease forwards;
 }
 
 .servicesSubtitle {
-  font-size: 1.5rem;
-  opacity: 0.9;
+  font-size: 1.4rem;
+  opacity: 0.95;
+  animation: slideUp 1.3s ease forwards;
 }
 
 .servicesIntro {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto 4rem;
   text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+  text-align: justify;
 }
 
 .servicesIntro h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color, #003366);
+  font-weight: 600;
 }
 
 .servicesIntro p {
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.8;
+  color: #444;
 }
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
+/* Process Section */
 .processSection {
-  background-color: var(--secondary-color);
+  background: linear-gradient(135deg, #f8faff, #eef3f9);
+  padding: 4rem 0;
 }
 
 .processSteps {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
   position: relative;
 }
@@ -62,89 +74,127 @@
   top: 0;
   bottom: 0;
   left: 24px;
-  width: 2px;
-  background-color: var(--primary-color);
+  width: 3px;
+  background: linear-gradient(#0073e6, #00bfff);
+  animation: growLine 2s ease forwards;
 }
 
 .processStep {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInStep 0.8s ease forwards;
 }
 
+.processStep:nth-child(1) { animation-delay: 0.2s; }
+.processStep:nth-child(2) { animation-delay: 0.4s; }
+.processStep:nth-child(3) { animation-delay: 0.6s; }
+.processStep:nth-child(4) { animation-delay: 0.8s; }
+.processStep:nth-child(5) { animation-delay: 1s; }
+
 .stepNumber {
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary-color);
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #0073e6, #00bfff);
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 115, 230, 0.3);
 }
 
 .processStep h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #003366;
 }
 
+/* CTA Section */
 .ctaSection {
-  background-image: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.9)), url('/images/cta-bg.jpg');
+  background-image: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.8)), url('/images/cta-bg.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
-}
-
-.ctaContent {
+  padding: 4rem 2rem;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .ctaContent h2 {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
 }
 
 .ctaContent p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .ctaButton {
   display: inline-block;
-  background-color: #fff;
-  color: var(--primary-color);
-  padding: 1rem 2.5rem;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #003366;
+  padding: 1rem 2.8rem;
+  border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;
-  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 .ctaButton:hover {
-  background-color: var(--accent-color);
-  color: #333;
+  background: linear-gradient(135deg, #0073e6, #00bfff);
+  color: #fff;
+  transform: scale(1.05);
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInStep {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes growLine {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .servicesHero {
-    height: 30vh;
+    height: 35vh;
   }
-  
+
   .servicesTitle {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
-  
+
   .servicesSubtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  
+
   .servicesGrid {
     grid-template-columns: 1fr;
   }
