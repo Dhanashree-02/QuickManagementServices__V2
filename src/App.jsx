@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import styles from './App.module.css';
 // import Footer from './components/Footer/Footer.jsx';
-import Header from './components/Header/Header.jsx';
+// import Header from './components/Header/Header.jsx';
 import ContactForm from './components/ContactForm/contactForm.jsx';
 import About from './pages/About/About.jsx';
 import Contact from './pages/Contact/contact.jsx';
@@ -16,7 +16,7 @@ function App() {
     <Router>
        <ScrollToTop />  
       <div className={styles.app}>
-        <Header />
+        {/* <Header /> */}
         <main className={styles.main}>
           <Routes>
             <Route path="/" element={<Home />} />
