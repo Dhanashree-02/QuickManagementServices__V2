@@ -7,10 +7,13 @@ import Contact from './pages/Contact/contact';
 import Home from './pages/Home/Home';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail';
 import Services from './pages/Services/Services';
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+
 
 function App() {
   return (
     <Router>
+       <ScrollToTop />  
       <div className={styles.app}>
         <Header />
         <main className={styles.main}>

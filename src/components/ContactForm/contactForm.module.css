@@ -1,16 +1,16 @@
-.contactForm {
+/* .contactForm {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   padding: 2.5rem;
   border-radius: 1.25rem;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
+} */
 
-.contactForm:hover {
+/* .contactForm:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .formGroup {
   margin-bottom: 1.75rem;

@@ -13,9 +13,8 @@
 
 /* HERO SECTION */
 .heroSection {
-  height: 40vh;
-  background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)),
-    url('/images/contact-hero.jpg') center/cover no-repeat;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #0f2027, #203a43, #2c5364);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,11 +102,12 @@
   animation: fadeInUp 1.2s ease;
 }
 
+/* INFO ICONS */
 .infoIcon {
   width: 45px;
   height: 45px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,14 +115,16 @@
   color: white;
   font-size: 1.2rem;
   flex-shrink: 0;
-  transition: background var(--transition-normal), transform var(--transition-normal);
+  box-shadow: 0 4px 10px rgba(0, 86, 179, 0.25);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
+  animation: popIn 0.6s ease forwards;
 }
 
 .infoIcon:hover {
-  background-color: var(--accent-color);
-  transform: scale(1.1);
+  transform: rotate(10deg) scale(1.15);
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  box-shadow: 0 8px 16px rgba(255, 107, 53, 0.35);
 }
-
 
 /* MAP */
 .mapContainer {
@@ -141,7 +143,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-
 .placeholderMap {
   width: 100%;
   height: 100%;
@@ -151,6 +152,81 @@
   align-items: center;
   font-size: 1.5rem;
   color: var(--text-light);
+}
+
+/* SOCIAL LINKS */
+.socialLinks {
+  margin-top: 2.5rem;
+}
+
+.socialLinks h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.socialIcons a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--secondary-color), #fff);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.socialIcons a::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  top: -100%;
+  left: -100%;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.socialIcons a:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.socialIcons a svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialIcons a:hover svg {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* CONTACT INFO CONTENT */
+.infoContent h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--text-color);
+}
+
+.infoContent p {
+  color: var(--text-light);
+  margin: 0.2rem 0;
+  line-height: 1.6;
 }
 
 /* ANIMATIONS */
@@ -167,6 +243,20 @@
 @keyframes slideDown {
   from { transform: translateY(-40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* RESPONSIVE */
