@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import styles from './App.module.css';
-import Footer from './components/Footer/Footer.jsx';
+// import Footer from './components/Footer/Footer.jsx';
 import Header from './components/Header/Header.jsx';
 import ContactForm from './components/ContactForm/contactForm.jsx';
 import About from './pages/About/About.jsx';
@@ -26,7 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
