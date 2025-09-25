@@ -1,22 +1,20 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import styles from './App.module.css';
-// import Footer from './components/Footer/Footer.jsx';
-// import Header from './components/Header/Header.jsx';
-import ContactForm from './components/ContactForm/contactForm.jsx';
-import About from './pages/About/About.jsx';
-import Contact from './pages/Contact/contact.jsx';
-import Home from './pages/Home/Home.jsx';
-import ServiceDetail from './pages/ServiceDetail/ServiceDetail.jsx';
-import Services from './pages/Services/Services.jsx';
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
-
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Home from './pages/Home/Home';
+import ServiceDetail from './pages/ServiceDetail/ServiceDetail';
+import Services from './pages/Services/Services';
 
 function App() {
   return (
     <Router>
-       <ScrollToTop />  
+      <ScrollToTop />
       <div className={styles.app}>
-        {/* <Header /> */}
+        <Header />
         <main className={styles.main}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -26,7 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );
