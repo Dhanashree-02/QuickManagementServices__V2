@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Features from "../../components/Features/Features";
 import Hero from "../../components/Hero/Hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import styles from "./Home.module.css";
@@ -37,6 +38,8 @@ const Home = () => {
     <div>
       <Hero />
 
+    {/* Features */}
+    <Features />
       {/* Services Section */}
       <section className={`section ${styles.servicesSection}`}>
         <div className="container">

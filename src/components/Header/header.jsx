@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
+import logo from "../../assets/Logo/QMSSmallLogo.png"; 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +14,7 @@ const Header = () => {
   // Detect scroll for shrinking header effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -25,14 +22,15 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}
-    >
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className="container">
         <div className={styles.headerContent}>
           {/* Logo */}
           <div className={styles.logo}>
-            <h1>QMS</h1>
+            <Link to="/">
+              <img src={logo} alt="QMS Logo" className={styles.logoImage} />
+              {/* <span className={styles.logoText}>QMS</span> */}
+            </Link>
           </div>
 
           {/* Navbar */}
@@ -45,44 +43,18 @@ const Header = () => {
               <span></span>
               <span></span>
             </div>
-            <ul
-              className={`${styles.navList} ${isOpen ? styles.active : ""}`}
-            >
+            <ul className={`${styles.navList} ${isOpen ? styles.active : ""}`}>
               <li className={styles.navItem}>
-                <Link
-                  to="/"
-                  className={styles.navLink}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </Link>
+                <Link to="/" className={styles.navLink} onClick={() => setIsOpen(false)}>Home</Link>
               </li>
               <li className={styles.navItem}>
-                <Link
-                  to="/about"
-                  className={styles.navLink}
-                  onClick={() => setIsOpen(false)}
-                >
-                  About
-                </Link>
+                <Link to="/about" className={styles.navLink} onClick={() => setIsOpen(false)}>About</Link>
               </li>
               <li className={styles.navItem}>
-                <Link
-                  to="/services"
-                  className={styles.navLink}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Services
-                </Link>
+                <Link to="/services" className={styles.navLink} onClick={() => setIsOpen(false)}>Services</Link>
               </li>
               <li className={styles.navItem}>
-                <Link
-                  to="/contact"
-                  className={styles.navLink}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contact
-                </Link>
+                <Link to="/contact" className={styles.navLink} onClick={() => setIsOpen(false)}>Contact</Link>
               </li>
             </ul>
           </nav>

@@ -377,3 +377,92 @@
     padding: 1.5rem;
   }
 }
+.methodology {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8fbff, #eef4ff);
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #1a237e;
+  position: relative;
+}
+
+.methodGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.methodCard {
+  background: #fff;
+  padding: 30px 25px;
+  width: 300px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.methodCard:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.iconBox {
+  font-size: 3rem;
+  color: #1976d2;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.methodCard:hover .iconBox {
+  color: #0d47a1;
+}
+
+.methodCard h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.methodCard p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Stats */
+.statsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.statBox {
+  background: #1976d2;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  min-width: 220px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.2);
+}
+
+.statBox h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.statBox p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}

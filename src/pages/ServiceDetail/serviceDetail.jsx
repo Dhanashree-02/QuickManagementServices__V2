@@ -9,51 +9,98 @@ const ServiceDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // In a real application, you would fetch the service data from an API
-    // This is mock data for demonstration purposes
+    // Updated mock services for your new list
     const mockServices = {
       '1': {
         id: '1',
-        title: 'Business Management',
-        description: 'Our business management services help you streamline operations, improve efficiency, and drive growth. We provide comprehensive solutions tailored to your specific business needs.',
-        fullDescription: 'Our business management services are designed to help organizations of all sizes optimize their operations and achieve sustainable growth. We work closely with your team to identify areas for improvement and implement effective strategies that drive results. Our experienced consultants bring industry-specific knowledge and best practices to help you navigate challenges and capitalize on opportunities.',
+        title: 'Blockchain Services',
+        description: 'Secure, scalable, and innovative blockchain solutions for businesses.',
+        fullDescription:
+          'Our blockchain services enable businesses to leverage decentralized technology for improved security, transparency, and efficiency. From smart contract development to enterprise blockchain integration, we help companies unlock new opportunities in digital transformation.',
         features: [
-          'Strategic planning and execution',
-          'Process optimization and workflow design',
-          'Performance measurement and KPI tracking',
-          'Change management and organizational development',
-          'Resource allocation and capacity planning'
+          'Smart contract development',
+          'Private and public blockchain solutions',
+          'Decentralized applications (DApps)',
+          'Blockchain consulting and strategy',
+          'Integration with existing systems',
         ],
-        image: '/images/business-management.jpg'
+        image: '/images/blockchain.jpg',
       },
       '2': {
         id: '2',
-        title: 'Financial Consulting',
-        description: 'Our financial consulting services provide expert guidance on financial planning, investment strategies, and risk management to help you achieve your financial goals.',
-        fullDescription: 'Our financial consulting services offer comprehensive financial guidance to help individuals and businesses make informed decisions about their financial future. We take a holistic approach to understanding your unique financial situation and goals, then develop customized strategies to help you achieve them. Our team of certified financial advisors stays up-to-date with the latest market trends and regulatory changes to provide you with sound advice.',
+        title: 'Big Data Analysis',
+        description: 'Transform raw data into actionable insights for better decision-making.',
+        fullDescription:
+          'Our big data analysis services help organizations make sense of massive datasets. Using advanced analytics, AI, and machine learning, we extract valuable insights that drive growth, optimize operations, and improve customer experiences.',
         features: [
-          'Financial analysis and forecasting',
-          'Investment strategy and portfolio management',
-          'Risk assessment and mitigation planning',
-          'Tax planning and optimization',
-          'Retirement and succession planning'
+          'Predictive analytics and forecasting',
+          'Data visualization and dashboards',
+          'Machine learning model development',
+          'Customer behavior analysis',
+          'Real-time data processing',
         ],
-        image: '/images/financial-consulting.jpg'
+        image: '/images/big-data.jpg',
       },
       '3': {
         id: '3',
-        title: 'Marketing Strategy',
-        description: 'Our marketing strategy services help you develop and implement effective marketing campaigns to reach your target audience and drive customer engagement.',
-        fullDescription: 'Our marketing strategy services are designed to help businesses build strong brands, connect with their target audiences, and drive measurable results. We combine market research, consumer insights, and creative thinking to develop marketing strategies that differentiate your business and create competitive advantage. Our data-driven approach ensures that your marketing investments deliver optimal returns.',
+        title: 'Cloud Computing',
+        description: 'Flexible and cost-effective cloud solutions to scale your business.',
+        fullDescription:
+          'We provide end-to-end cloud computing services to help businesses migrate, manage, and optimize their IT infrastructure. From cloud storage to serverless computing, we ensure your business benefits from high performance and scalability.',
         features: [
-          'Brand development and positioning',
-          'Market research and customer segmentation',
-          'Digital marketing and social media strategy',
-          'Content creation and campaign management',
-          'Marketing analytics and ROI measurement'
+          'Cloud migration and deployment',
+          'Infrastructure as a Service (IaaS)',
+          'Platform as a Service (PaaS)',
+          'Cloud security and compliance',
+          'Hybrid and multi-cloud strategies',
         ],
-        image: '/images/marketing-strategy.jpg'
-      }
+        image: '/images/cloud-computing.jpg',
+      },
+      '4': {
+        id: '4',
+        title: 'IoT Solutions and Services',
+        description: 'Connect devices and data for smarter, automated business solutions.',
+        fullDescription:
+          'Our IoT services empower businesses to connect devices, collect data, and automate processes. We build custom IoT ecosystems that improve operational efficiency, enable predictive maintenance, and enhance user experiences.',
+        features: [
+          'IoT device integration',
+          'Data collection and analytics',
+          'Industrial IoT (IIoT) solutions',
+          'Smart home and city applications',
+          'Predictive maintenance systems',
+        ],
+        image: '/images/iot.jpg',
+      },
+      '5': {
+        id: '5',
+        title: 'Web Application Development',
+        description: 'Custom web apps tailored to meet your business goals.',
+        fullDescription:
+          'Our web application development team builds responsive, scalable, and user-friendly applications. Whether it’s an e-commerce site, enterprise dashboard, or SaaS platform, we deliver solutions that perform seamlessly across devices.',
+        features: [
+          'Custom web app development',
+          'Progressive web apps (PWA)',
+          'E-commerce platforms',
+          'API integration and development',
+          'UI/UX design and optimization',
+        ],
+        image: '/images/web-development.jpg',
+      },
+      '6': {
+        id: '6',
+        title: 'Mobile Application Development',
+        description: 'Innovative mobile apps for iOS and Android platforms.',
+        fullDescription:
+          'We design and develop high-performance mobile applications that engage users and drive business growth. Our team specializes in both native and cross-platform apps, ensuring top-notch user experience and functionality.',
+        features: [
+          'iOS and Android native app development',
+          'Cross-platform mobile apps',
+          'App UI/UX design',
+          'App testing and quality assurance',
+          'App deployment and maintenance',
+        ],
+        image: '/images/mobile-development.jpg',
+      },
     };
 
     // Simulate API call
@@ -75,7 +122,8 @@ const ServiceDetail = () => {
 
   return (
     <div className={styles.serviceDetail}>
-      <div className={styles.serviceHeader}>
+       
+          <div className={styles.serviceHeader}>
         <h1>{service.title}</h1>
         <div className={styles.serviceBanner}>
           <div className={styles.imageContainer}>
@@ -83,8 +131,8 @@ const ServiceDetail = () => {
             <div className={styles.placeholderImage}>
               {service.title.charAt(0)}
             </div>
-          </div>
         </div>
+      </div>
       </div>
 
       <div className={styles.serviceContent}>
@@ -103,8 +151,12 @@ const ServiceDetail = () => {
         </div>
 
         <div className={styles.serviceActions}>
-          <Button to="/contact" variant="primary">Request a Consultation</Button>
-          <Button to="/services" variant="secondary">View All Services</Button>
+          <Button to="/contact" variant="primary">
+            Request a Consultation
+          </Button>
+          <Button to="/services" variant="secondary">
+            View All Services
+          </Button>
         </div>
       </div>
     </div>
