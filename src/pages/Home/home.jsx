@@ -3,6 +3,7 @@ import Features from "../../components/Features/Features";
 import Hero from "../../components/Hero/Hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import styles from "./Home.module.css";
+import Portfolio from "../../components/Portfolio/Portfolio";
 
 // ✅ Import images properly
 import businessImg from "../../assets/Service/Business Consulting.jpg";
@@ -86,6 +87,8 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      <Portfolio />
 
       {/* About Section */}
       <section className={`section ${styles.aboutSection}`}>

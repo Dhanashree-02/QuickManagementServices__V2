@@ -167,3 +167,8 @@
     color: #fff;
   }
 }
+.activeLink {
+  color: #007bff; /* Highlight color */
+  font-weight: bold;
+  border-bottom: 2px solid #007bff; /* Optional underline */
+}
