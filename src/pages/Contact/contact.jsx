@@ -1,9 +1,38 @@
 import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
-import ContactForm from "../../components/ContactForm/contactForm";
+import { useState } from "react";
 import styles from "./contact.module.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    alert("Thank you for your message! We will get back to you soon.");
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    });
+  };
+
   return (
     <div className={styles.contactPage}>
       {/* Hero Section */}
@@ -36,7 +65,71 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
         >
           <h2>Send Us a Message</h2>
-          <ContactForm />
+          <form className={styles.contactForm} onSubmit={handleSubmit}>
+            <div className={styles.formGroup}>
+              <label htmlFor="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className={styles.formRow}>
+              <div className={styles.formGroup}>
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="phone">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" className={styles.submitBtn}>
+              Send Message
+            </button>
+          </form>
         </motion.div>
 
         {/* Contact Info */}
