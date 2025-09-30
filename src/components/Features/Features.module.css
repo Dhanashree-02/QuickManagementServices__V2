@@ -1,65 +1,91 @@
 .features {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #f4faff, #e9f0ff);
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
 .sectionTitle {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #003366;
   font-weight: 700;
-  color: #1a237e;
-  margin-bottom: 15px;
 }
 
 .sectionSubtitle {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 50px;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #555;
 }
 
 .featureGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-content: center;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 2rem;
 }
 
 .featureCard {
   background: #fff;
-  border-radius: 18px;
-  padding: 30px 25px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-align: center;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden; /* To contain the pseudo-element effect */
+  color: #003366; /* Default text color */
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00bfff, #0073e6, #92fe9d, #00c9ff);
+  filter: blur(80px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.featureCard:hover::before {
+  opacity: 0.7; /* Visible blur on hover */
 }
 
 .featureCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  color: #fff; /* Text color on hover */
 }
 
+.featureCard h3,
+.featureCard p,
 .iconBox {
-  font-size: 3rem;
-  color: #1976d2;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative; /* To stay above pseudo-element */
+  z-index: 1;
+  transition: color 0.4s ease-in-out;
 }
 
 .featureCard:hover .iconBox {
-  transform: rotate(10deg) scale(1.1);
-  color: #0d47a1;
+  color: #fff; /* Icon color on hover */
 }
 
-.featureCard h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #222;
+/* Icon box */
+.iconBox {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin-bottom: 1rem;
+  transition: color 0.4s ease-in-out;
 }
 
-.featureCard p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
+/* Responsive */
+@media (max-width: 1024px) {
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .featureGrid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
 }

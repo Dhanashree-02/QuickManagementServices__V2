@@ -1,32 +1,47 @@
 import { motion } from "framer-motion";
-import { FaLaptopCode, FaProjectDiagram, FaUsers, FaRegLightbulb, FaShieldAlt } from "react-icons/fa";
+import { FaLaptopCode, FaCloud, FaShieldAlt, FaChartLine, FaMobileAlt, FaUsers, FaCog, FaHeadset } from "react-icons/fa";
 import styles from "./Features.module.css";
 
 const features = [
   {
     icon: <FaLaptopCode />,
-    title: "Innovative Technology Solutions",
-    desc: "Cutting-edge technology solutions tailored to meet unique business challenges. We provide start-to-finish expertise in managing projects from concept to delivery, ensuring timely execution."
+    title: "Custom Software Development",
+    desc: "Tailored solutions to meet your specific business needs. Agile development ensures fast delivery and flexibility, with scalable applications for long-term growth."
   },
   {
-    icon: <FaProjectDiagram />,
-    title: "Diverse Methodological Approaches",
-    desc: "Flexibility to use Linear, RAD, Iterative, and Agile methodologies to cater to project requirements and timelines. We focus on exceeding client expectations with reliable solutions."
-  },
-  {
-    icon: <FaUsers />,
-    title: "Expert Resource Team",
-    desc: "Our team consists of highly skilled designers, developers, strategists, and business experts ensuring the best quality and on-time service delivery."
-  },
-  {
-    icon: <FaRegLightbulb />,
-    title: "Strategic Innovation",
-    desc: "We drive innovation by combining creativity with strategic execution, helping businesses stay competitive in rapidly evolving markets."
+    icon: <FaCloud />,
+    title: "Cloud Services & Management",
+    desc: "Cloud migration, infrastructure setup, and continuous monitoring for cost-efficient, secure, and scalable cloud solutions."
   },
   {
     icon: <FaShieldAlt />,
-    title: "Trusted & Secure",
-    desc: "We prioritize data security and compliance, implementing industry best practices to ensure client trust and long-term success."
+    title: "Cybersecurity & Compliance",
+    desc: "Protect your systems and sensitive data from cyber threats. Regular audits and compliance with industry standards using advanced security protocols."
+  },
+  {
+    icon: <FaChartLine />,
+    title: "Data Analytics & BI",
+    desc: "Transform raw data into actionable insights. Business Intelligence dashboards and predictive analytics help anticipate trends and opportunities."
+  },
+  {
+    icon: <FaCog />,
+    title: "DevOps & Automation",
+    desc: "Continuous integration and delivery (CI/CD), automated testing, and infrastructure as code for reliable and faster release cycles."
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: "Mobile & Web Applications",
+    desc: "Responsive, high-performance web applications and custom mobile apps for iOS and Android with intuitive UI/UX design."
+  },
+  {
+    icon: <FaUsers />,
+    title: "IT Consulting & Strategy",
+    desc: "Expert guidance on technology adoption and digital transformation, roadmap planning aligned with business objectives, maximizing ROI."
+  },
+  {
+    icon: <FaHeadset />,
+    title: "24/7 Support & Maintenance",
+    desc: "Round-the-clock technical support with regular updates, patching, and performance monitoring to minimize downtime and ensure business continuity."
   }
 ];
 
@@ -41,10 +56,10 @@ const Features = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Our Features
+          Our Features for IT Companies
         </motion.h2>
         <p className={styles.sectionSubtitle}>
-          Discover what makes us stand out in delivering exceptional business solutions
+          Discover what makes us stand out in delivering exceptional IT solutions
         </p>
 
         <div className={styles.featureGrid}>
