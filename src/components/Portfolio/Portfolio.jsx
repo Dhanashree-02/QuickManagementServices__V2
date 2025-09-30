@@ -13,12 +13,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Educational Courses App",
+    title: "Educational Website",
     description:
       "A mobile app offering online courses, live classes, and progress tracking for students.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNDWicww1TGCCc7lIRGImwKP_i6bhoRSaxmw&s",
-    link: "#",
+    link: "https://university-website-woad.vercel.app/",
   },
   {
     id: 3,
