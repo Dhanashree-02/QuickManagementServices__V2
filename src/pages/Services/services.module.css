@@ -125,6 +125,100 @@
   color: #555;
 }
 
+/* ===== Development Process Section ===== */
+.devProcessSection {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.devProcessSection h2, .devProcessSection p {
+  text-align: center;
+}
+
+.devProcessTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.devProcessItem {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.devProcessItem.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.devStep {
+  flex: 1;
+  text-align: left;
+}
+
+.devStep .stepNumber {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00bfff;
+  margin-bottom: 10px;
+}
+
+.devContent {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.devContent img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.devContent p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Hover Cards Alternative */
+.devProcessGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.devProcessCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.devProcessCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.devImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
 /* ===== CTA Section ===== */
 .ctaSection {
   background-image: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.8)), url('/images/cta-bg.jpg');
@@ -188,6 +282,21 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .devProcessItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .devStep {
+    text-align: center;
+  }
+
+  .devContent img {
+    max-height: 200px;
+  }
+}
+
 @media (max-width: 768px) {
   .servicesHero {
     height: 35vh;

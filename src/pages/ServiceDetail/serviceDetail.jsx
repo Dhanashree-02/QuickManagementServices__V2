@@ -14,94 +14,95 @@ const ServiceDetail = () => {
       '1': {
         id: '1',
         title: 'Blockchain Services',
-        description: 'Secure, scalable, and innovative blockchain solutions for businesses.',
+        description: 'Secure and scalable blockchain solutions to revolutionize business operations.',
         fullDescription:
-          'Our blockchain services enable businesses to leverage decentralized technology for improved security, transparency, and efficiency. From smart contract development to enterprise blockchain integration, we help companies unlock new opportunities in digital transformation.',
+          "Our Blockchain Services help businesses embrace decentralization with security, scalability, and transparency at the core. We specialize in designing and implementing smart contracts, building decentralized applications (DApps), and deploying both public and private blockchain networks. By integrating blockchain into your enterprise systems, we enable fraud prevention, process automation, and trusted peer-to-peer transactions. From strategy consulting to development and maintenance, our solutions ensure smooth adoption of blockchain tailored to your industry needs.",
         features: [
           'Smart contract development',
-          'Private and public blockchain solutions',
+          'Enterprise-grade blockchain integration',
           'Decentralized applications (DApps)',
           'Blockchain consulting and strategy',
-          'Integration with existing systems',
+          'Custom public and private blockchain solutions',
         ],
-        image: '/images/blockchain.jpg',
+        image: 'https://i.pinimg.com/736x/c6/6c/b6/c66cb6fa625bc0c0fdf372f5b0e67e35.jpg',
       },
       '2': {
         id: '2',
-        title: 'Big Data Analysis',
-        description: 'Transform raw data into actionable insights for better decision-making.',
+        title: 'Big Data Analytics',
+        description: 'Turn complex data into valuable insights that drive business growth.',
         fullDescription:
-          'Our big data analysis services help organizations make sense of massive datasets. Using advanced analytics, AI, and machine learning, we extract valuable insights that drive growth, optimize operations, and improve customer experiences.',
+          "Our Big Data Analytics services empower organizations to process, analyze, and visualize large volumes of structured and unstructured data. Using advanced technologies such as AI, machine learning, and predictive analytics, we uncover patterns, trends, and correlations hidden in data. This enables better decision-making, operational efficiency, and improved customer engagement. From real-time dashboards to custom forecasting models, we help businesses harness the true power of data and achieve measurable results.",
         features: [
           'Predictive analytics and forecasting',
-          'Data visualization and dashboards',
+          'Data visualization dashboards',
           'Machine learning model development',
-          'Customer behavior analysis',
-          'Real-time data processing',
+          'Customer and market behavior analysis',
+          'Real-time big data processing',
         ],
-        image: '/images/big-data.jpg',
+        image: "https://i.pinimg.com/1200x/bc/fc/14/bcfc14f5ab1bebfc02222224b7fa1801.jpg",
       },
       '3': {
         id: '3',
-        title: 'Cloud Computing',
-        description: 'Flexible and cost-effective cloud solutions to scale your business.',
+        title: 'Cloud Computing Solutions',
+        description: 'Flexible cloud solutions for secure, scalable, and cost-effective IT infrastructure.',
         fullDescription:
-          'We provide end-to-end cloud computing services to help businesses migrate, manage, and optimize their IT infrastructure. From cloud storage to serverless computing, we ensure your business benefits from high performance and scalability.',
+          "We offer end-to-end Cloud Computing Solutions to help businesses migrate, modernize, and manage their IT infrastructure. Our expertise spans IaaS, PaaS, SaaS, serverless computing, and hybrid cloud deployments. By leveraging cloud platforms, we enable businesses to scale on demand, reduce infrastructure costs, and improve agility. Our services include seamless cloud migration, security compliance, automation, and monitoring, ensuring your business remains innovative and competitive in a digital-first world.",
         features: [
           'Cloud migration and deployment',
           'Infrastructure as a Service (IaaS)',
           'Platform as a Service (PaaS)',
-          'Cloud security and compliance',
+          'Cloud security, compliance, and monitoring',
           'Hybrid and multi-cloud strategies',
         ],
-        image: '/images/cloud-computing.jpg',
+        image: 'https://i.pinimg.com/736x/e6/48/8b/e6488bcab627b69f2948bd5138493be2.jpg',
       },
       '4': {
         id: '4',
-        title: 'IoT Solutions and Services',
-        description: 'Connect devices and data for smarter, automated business solutions.',
+        title: 'IoT Solutions & Services',
+        description: 'Smart IoT solutions to connect devices, data, and processes efficiently.',
         fullDescription:
-          'Our IoT services empower businesses to connect devices, collect data, and automate processes. We build custom IoT ecosystems that improve operational efficiency, enable predictive maintenance, and enhance user experiences.',
+          "Our Internet of Things (IoT) Solutions connect devices, sensors, and systems to enable real-time monitoring, data collection, and intelligent automation. From industrial IoT (IIoT) to smart homes and smart cities, we build custom IoT ecosystems that enhance efficiency, reduce downtime, and improve decision-making. With predictive maintenance, advanced analytics, and seamless device integration, we help businesses create smarter environments and deliver enhanced user experiences.",
         features: [
-          'IoT device integration',
-          'Data collection and analytics',
+          'IoT device and sensor integration',
+          'Data collection and real-time analytics',
           'Industrial IoT (IIoT) solutions',
-          'Smart home and city applications',
+          'Smart home and smart city applications',
           'Predictive maintenance systems',
         ],
-        image: '/images/iot.jpg',
+        image: 'https://i.pinimg.com/736x/18/e3/fb/18e3fb1b4007e6622d3607dac693c513.jpg',
       },
       '5': {
         id: '5',
         title: 'Web Application Development',
-        description: 'Custom web apps tailored to meet your business goals.',
+        description: 'Custom-built web apps designed for performance, security, and scalability.',
         fullDescription:
-          'Our web application development team builds responsive, scalable, and user-friendly applications. Whether it’s an e-commerce site, enterprise dashboard, or SaaS platform, we deliver solutions that perform seamlessly across devices.',
+          "Our Web Application Development services deliver powerful, responsive, and scalable solutions tailored to your business needs. Whether it's an e-commerce store, enterprise dashboard, or SaaS platform, we focus on creating seamless user experiences combined with high-end performance. We specialize in custom development, API integrations, database management, and UI/UX optimization. Every application is designed to be mobile-friendly, secure, and capable of handling business growth effectively.",
         features: [
           'Custom web app development',
-          'Progressive web apps (PWA)',
-          'E-commerce platforms',
-          'API integration and development',
-          'UI/UX design and optimization',
+          'Progressive Web Apps (PWA)',
+          'E-commerce platforms and portals',
+          'API design, integration, and management',
+          'User-focused UI/UX design',
         ],
-        image: '/images/web-development.jpg',
+        image: 'https://i.pinimg.com/1200x/e3/ea/71/e3ea71cc2c19b2ae2d060dc51d1a3cbe.jpg',
       },
       '6': {
         id: '6',
         title: 'Mobile Application Development',
-        description: 'Innovative mobile apps for iOS and Android platforms.',
+        description: 'Innovative mobile applications to boost engagement and business reach.',
         fullDescription:
-          'We design and develop high-performance mobile applications that engage users and drive business growth. Our team specializes in both native and cross-platform apps, ensuring top-notch user experience and functionality.',
+          "We design and develop cutting-edge mobile applications that combine functionality with a superior user experience. From iOS and Android native apps to cross-platform frameworks, we ensure robust performance and seamless design. Our services cover the complete mobile app lifecycle, including UI/UX design, backend integration, rigorous testing, deployment, and ongoing support. Whether it's a consumer app, enterprise tool, or gaming platform, we deliver apps that drive engagement and business success.",
         features: [
-          'iOS and Android native app development',
-          'Cross-platform mobile apps',
-          'App UI/UX design',
-          'App testing and quality assurance',
-          'App deployment and maintenance',
+          'Native iOS and Android app development',
+          'Cross-platform mobile apps (Flutter/React Native)',
+          'Custom app UI/UX design',
+          'Quality assurance and performance testing',
+          'App deployment, updates, and maintenance',
         ],
-        image: '/images/mobile-development.jpg',
+        image: 'https://i.pinimg.com/736x/67/93/15/679315a06e8f6de01b44d9a9ed58200a.jpg',
       },
     };
+
 
     // Simulate API call
     setTimeout(() => {
@@ -122,17 +123,24 @@ const ServiceDetail = () => {
 
   return (
     <div className={styles.serviceDetail}>
-       
-          <div className={styles.serviceHeader}>
+
+      <div className={styles.serviceHeader}>
         <h1>{service.title}</h1>
         <div className={styles.serviceBanner}>
           <div className={styles.imageContainer}>
             {/* In a real app, you would use an actual image */}
-            <div className={styles.placeholderImage}>
-              {service.title.charAt(0)}
+            <div className={styles.serviceBanner}>
+              <div className={styles.imageContainer}>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className={styles.serviceImage}
+                />
+              </div>
             </div>
+
+          </div>
         </div>
-      </div>
       </div>
 
       <div className={styles.serviceContent}>
