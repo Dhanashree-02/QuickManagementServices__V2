@@ -15,10 +15,8 @@ const projects = [
     id: 2,
     title: "Educational Website",
     description:
-      "A mobile app offering online courses, live classes, and progress tracking for students.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNDWicww1TGCCc7lIRGImwKP_i6bhoRSaxmw&s",
-    link: "https://university-website-woad.vercel.app/",
+"An interactive platform offering online courses, live classes, and quizzes, with progress tracking and certificates to enhance student learning.",    image:
+      "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
   },
   {
     id: 3,
