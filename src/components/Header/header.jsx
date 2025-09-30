@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom"; // ✅ import useLocation
+// ⬇️ CHANGED: Use NavLink instead of Link + useLocation
+import { NavLink } from "react-router-dom"; 
 import styles from "./Header.module.css";
 import logo from "../../assets/Logo/QMSSmallLogo.png"; 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation(); // ✅ get current route path
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -28,9 +28,10 @@ const Header = () => {
         <div className={styles.headerContent}>
           {/* Logo */}
           <div className={styles.logo}>
-            <Link to="/">
+            {/* ⬇️ CHANGED: NavLink instead of Link */}
+            <NavLink to="/">
               <img src={logo} alt="QMS Logo" className={styles.logoImage} />
-            </Link>
+            </NavLink>
           </div>
 
           {/* Navbar */}
@@ -44,41 +45,50 @@ const Header = () => {
               <span></span>
             </div>
             <ul className={`${styles.navList} ${isOpen ? styles.active : ""}`}>
+              {/* ⬇️ CHANGED: NavLink with isActive */}
               <li className={styles.navItem}>
-                <Link 
+                <NavLink 
                   to="/" 
-                  className={`${styles.navLink} ${location.pathname === "/" ? styles.activeLink : ""}`} 
+                  className={({ isActive }) =>
+                    `${styles.navLink} ${isActive ? styles.activeLink : ""}`
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className={styles.navItem}>
-                <Link 
+                <NavLink 
                   to="/about" 
-                  className={`${styles.navLink} ${location.pathname === "/about" ? styles.activeLink : ""}`} 
+                  className={({ isActive }) =>
+                    `${styles.navLink} ${isActive ? styles.activeLink : ""}`
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className={styles.navItem}>
-                <Link 
+                <NavLink 
                   to="/services" 
-                  className={`${styles.navLink} ${location.pathname === "/services" ? styles.activeLink : ""}`} 
+                  className={({ isActive }) =>
+                    `${styles.navLink} ${isActive ? styles.activeLink : ""}`
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   Services
-                </Link>
+                </NavLink>
               </li>
               <li className={styles.navItem}>
-                <Link 
+                <NavLink 
                   to="/contact" 
-                  className={`${styles.navLink} ${location.pathname === "/contact" ? styles.activeLink : ""}`} 
+                  className={({ isActive }) =>
+                    `${styles.navLink} ${isActive ? styles.activeLink : ""}`
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -89,4 +99,3 @@ const Header = () => {
 };
 
 export default Header;
- 

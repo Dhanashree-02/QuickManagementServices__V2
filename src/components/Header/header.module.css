@@ -168,7 +168,7 @@
   }
 }
 .activeLink {
-  color: #007bff; /* Highlight color */
+  color: #00c9ff; /* ⬅️ updated color to match hover */
   font-weight: bold;
-  border-bottom: 2px solid #007bff; /* Optional underline */
+  border-bottom: 2px solid #00c9ff; /* underline highlight */
 }
