@@ -29,38 +29,25 @@ const projects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNw2O22OG43NXtADb1j-qyccTd95wUuhz5zw&s",
     link: "#",
   },
-  {
-    id: 4,
-    title: "Data Dashboard",
-    description:
-      "A powerful visualization dashboard with interactive charts and reports.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDILshGKAc37Rbo1jICUj1FW67JO9bIy3h3w&s",
-    link: "#",
-  },
+  // {
+  //   id: 4,
+  //   title: "Data Dashboard",
+  //   description:
+  //     "A powerful visualization dashboard with interactive charts and reports.",
+  //   image:
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDILshGKAc37Rbo1jICUj1FW67JO9bIy3h3w&s",
+  //   link: "#",
+  // },
 ];
 
 const Portfolio = () => {
   return (
     <section className={styles.portfolio} id="portfolio">
       <div className="container">
-        <motion.h2
-          className={styles.heading}
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Our Portfolio
-        </motion.h2>
-
-        <motion.p
-          className={styles.subHeading}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          A showcase of our latest work and projects.
-        </motion.p>
+        <h2 className={styles.heading}>Our Portfolio</h2>
+        <p className={styles.subHeading}>
+          A showcase of our latest projects.
+        </p>
 
         <div className={styles.grid}>
           {projects.map((project, index) => (
@@ -70,14 +57,14 @@ const Portfolio = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              whileHover={{ y: -10, scale: 1.03 }}
+              viewport={{ once: true }}
             >
               <img
                 src={project.image}
                 alt={project.title}
                 className={styles.image}
               />
-              <div className={styles.cardContent}>
+              <div className={styles.overlay}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <a
