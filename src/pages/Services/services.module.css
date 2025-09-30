@@ -1,3 +1,4 @@
+/* ===== Hero Section ===== */
 .servicesHero {
   background: linear-gradient(135deg, #1e3c72, #2a5298, #0f2027, #203a43, #2c5364);
   background-size: cover;
@@ -25,12 +26,12 @@
   animation: slideUp 1.3s ease forwards;
 }
 
+/* ===== Services Intro ===== */
 .servicesIntro {
   max-width: 850px;
   margin: 0 auto 4rem;
-  text-align: center;
-  animation: fadeInUp 1s ease-in-out;
   text-align: justify;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .servicesIntro h2 {
@@ -46,6 +47,7 @@
   color: #444;
 }
 
+/* ===== Services Grid ===== */
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -53,10 +55,11 @@
   animation: fadeInUp 1.2s ease-in-out;
 }
 
-/* Process Section */
+/* ===== Process Section ===== */
 .processSection {
   background: linear-gradient(135deg, #f8faff, #eef3f9);
   padding: 4rem 0;
+  position: relative;
 }
 
 .processSteps {
@@ -76,23 +79,26 @@
   left: 24px;
   width: 3px;
   background: linear-gradient(#0073e6, #00bfff);
-  animation: growLine 2s ease forwards;
 }
 
+/* ===== Individual Steps ===== */
 .processStep {
   display: flex;
   gap: 1.5rem;
-  position: relative;
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: fadeInStep 0.8s ease forwards;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  opacity: 0;                   /* start hidden */
+  transform: translateX(-30px); /* start left */
+  transition: all 0.6s ease-out;
 }
 
-.processStep:nth-child(1) { animation-delay: 0.2s; }
-.processStep:nth-child(2) { animation-delay: 0.4s; }
-.processStep:nth-child(3) { animation-delay: 0.6s; }
-.processStep:nth-child(4) { animation-delay: 0.8s; }
-.processStep:nth-child(5) { animation-delay: 1s; }
+.processStep.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 .stepNumber {
   width: 55px;
@@ -114,7 +120,12 @@
   color: #003366;
 }
 
-/* CTA Section */
+.processStep p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===== CTA Section ===== */
 .ctaSection {
   background-image: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.8)), url('/images/cta-bg.jpg');
   background-size: cover;
@@ -155,7 +166,7 @@
   transform: scale(1.05);
 }
 
-/* Animations */
+/* ===== Animations ===== */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -176,12 +187,7 @@
   to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes growLine {
-  from { height: 0; }
-  to { height: 100%; }
-}
-
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .servicesHero {
     height: 35vh;

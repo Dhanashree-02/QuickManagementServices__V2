@@ -1,16 +1,35 @@
+import { useEffect, useRef } from "react";
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import styles from './Services.module.css';
 
-// Importing images properly from assets
-// Importing images properly from assets 
+// Importing images from assets
 import service1 from "../../../src/assets/Service/Business Consulting.jpg";
- import service2 from "../../../src/assets/Service/Financial Planning.jpg"; 
- import service3 from "../../../src/assets/Service/Market Analysis.webp"; 
- import service4 from "../../../src/assets/Service/Financial Planning.jpg"; 
- import service5 from "../../../src/assets/Service/Market Analysis.webp"; 
- import service6 from "../../../src/assets/Service/Business Consulting.jpg";
+import service2 from "../../../src/assets/Service/Financial Planning.jpg";
+import service3 from "../../../src/assets/Service/Market Analysis.webp";
+import service4 from "../../../src/assets/Service/Financial Planning.jpg";
+import service5 from "../../../src/assets/Service/Market Analysis.webp";
+import service6 from "../../../src/assets/Service/Business Consulting.jpg";
 
 const Services = () => {
+  const stepRefs = useRef([]); // 🔹 For scroll-triggered animation
+
+  // Scroll-triggered animation for process steps
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.animate); // add animation class
+            observer.unobserve(entry.target); // stop observing after animating
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    stepRefs.current.forEach(el => el && observer.observe(el));
+  }, []);
+
   const services = [
     {
       id: 1,
@@ -48,6 +67,29 @@ const Services = () => {
       description: 'Custom iOS and Android mobile applications with intuitive design, strong security, and high performance to engage users on the go.',
       image: service6,
     },
+  ];
+
+  const processSteps = [
+    {
+      title: "Consultation",
+      description: "We start by understanding your requirements, goals, and vision."
+    },
+    {
+      title: "Analysis",
+      description: "Our experts analyze the challenges and identify the right solutions for your business."
+    },
+    {
+      title: "Strategy Development",
+      description: "We design a tailored roadmap that aligns with your business objectives and future growth."
+    },
+    {
+      title: "Implementation",
+      description: "We execute the strategy with precision, ensuring seamless delivery and minimal disruption."
+    },
+    {
+      title: "Evaluation & Refinement",
+      description: "We continuously monitor and refine our solutions for maximum efficiency and results."
+    }
   ];
 
   return (
@@ -96,41 +138,20 @@ const Services = () => {
           <p className="section-subtitle">How we deliver innovative digital solutions</p>
 
           <div className={styles.processSteps}>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>1</div>
-              <div>
-                <h3>Consultation</h3>
-                <p>We start by understanding your requirements, goals, and vision.</p>
+            {processSteps.map((step, index) => (
+              <div
+                key={index}
+                ref={el => stepRefs.current[index] = el} // 🔹 reference for Intersection Observer
+                className={styles.processStep}
+                style={{ transitionDelay: `${index * 0.3}s` }} // stagger effect
+              >
+                <div className={styles.stepNumber}>{index + 1}</div>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
               </div>
-            </div>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>2</div>
-              <div>
-                <h3>Analysis</h3>
-                <p>Our experts analyze the challenges and identify the right solutions for your business.</p>
-              </div>
-            </div>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>3</div>
-              <div>
-                <h3>Strategy Development</h3>
-                <p>We design a tailored roadmap that aligns with your business objectives and future growth.</p>
-              </div>
-            </div>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>4</div>
-              <div>
-                <h3>Implementation</h3>
-                <p>We execute the strategy with precision, ensuring seamless delivery and minimal disruption.</p>
-              </div>
-            </div>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>5</div>
-              <div>
-                <h3>Evaluation & Refinement</h3>
-                <p>We continuously monitor and refine our solutions for maximum efficiency and results.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
